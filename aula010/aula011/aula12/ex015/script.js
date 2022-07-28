@@ -9,6 +9,30 @@ function verificar() {
 } else {
     var fsex = window.document.getElementsByName('radsex')
     var idade = ano - Number(fano.value)
-    res.innerHTML = `Idade calculada: ${idade}`
+    var gênero = ''
+    var img = document.createElement('img')
+    img.setAttribute('id', 'foto')
+    if (fsex[0],checked) {
+        gênero = 'Homem'
+        if (idade >=0 && idade < 10) {
+            //Criança
+            img.setAttribute('src', 'fotobebe.png.jpg')
+        }
+    
+} else if (idade < 21) {
+    //Jovem
+    img.setAttribute('src', 'fotohjovem.png.jpg')
+} else if (idade < 50){
+   //Adulto
+   img.setAttribute('src', 'fotohomem.png.jpg')
+}
+   else {
+    img.setAttribute('src', 'fotoidoso.png.jpg')
+   }
+    else if (fsex[1].checked) {
+        gênero = 'Mulher'
+    }
+    res.style.textAlign = 'center'
+    res.innerHTML = `Detectamos ${gênero} com ${idade}anos.`
 }
 }
