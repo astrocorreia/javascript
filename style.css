@@ -1,5 +1,5 @@
 body {
-    background: rgb(128, 128, 243);
+    background: rgb(91, 91, 235);
     font: normal 15pt Arial;
 }
 header {
@@ -8,6 +8,10 @@ header {
 }
 select {  
     overflow:hidden;
+ }
+
+ select#lista {
+    width: 150px;
  }
 section {
      background-color: white;
